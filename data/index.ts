@@ -69,40 +69,7 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
-  {
-    id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
-  },
-  {
-    id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
-];
+
 
 export const testimonials = [
   {
@@ -214,4 +181,38 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
   },
+];
+export const projects = [
+  {
+    id: 1,
+    title: "Chief Digital Officer, Athletic Greens",
+    description:
+      "We are the developers of AG1, the leading powdered beverage designed to provide daily foundational nutrition...",
+    status: "Previously",
+    linkLabel: "Athletic Greens valued at $1.2B",
+    link: "https://athleticgreens.com",
+    image: "/verificacion.jpeg", // Ajusta la ruta de las imágenes
+  },
+  {
+    id: 2,
+    title: "Founder & lead investor, Axacraft",
+    description:
+      "Axacraft was founded in August 2022 to address a substantial market gap...",
+    status: "Currently",
+    linkLabel: "What if everything we knew about consulting was wrong?",
+    link: "https://axacraft.com",
+    image: "/conexion.jpg",
+  },
+  {
+    id: 3,
+    title:
+      "I led Product, Engineering, Design, and IT at Hagerty - the global leader in classic car insurance.",
+    description:
+      "You may know us as the classic car insurance juggernaut...",
+    status: "Previously",
+    linkLabel: "Discover more about Hagerty",
+    link: "https://hagerty.com",
+    image: "/estudio.jpg",
+  }
+  
 ];
