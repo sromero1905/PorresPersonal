@@ -33,7 +33,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-gray-500 text-sm">
-          © 2024 Kelly Smith. All rights reserved.
+          © 2024 Francisco Romero Porres. All rights reserved.
         </p>
       </div>
     </footer>
