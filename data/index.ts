@@ -190,8 +190,8 @@ export const projects = [
       "We are the developers of AG1, the leading powdered beverage designed to provide daily foundational nutrition...",
     status: "Previously",
     linkLabel: "Athletic Greens valued at $1.2B",
-    link: "https://athleticgreens.com",
-    image: "/verificacion.jpeg", // Ajusta la ruta de las imágenes
+    link: "/projects/1", // Enlace dinámico basado en el id del proyecto
+    image: "/verificacion.jpeg", // Ruta ajustada de la imagen
   },
   {
     id: 2,
@@ -200,8 +200,8 @@ export const projects = [
       "Axacraft was founded in August 2022 to address a substantial market gap...",
     status: "Currently",
     linkLabel: "What if everything we knew about consulting was wrong?",
-    link: "https://axacraft.com",
-    image: "/conexion.jpg",
+    link: "/projects/2", // Enlace dinámico basado en el id del proyecto
+    image: "/conexion.jpg", // Ruta ajustada de la imagen
   },
   {
     id: 3,
@@ -211,8 +211,29 @@ export const projects = [
       "You may know us as the classic car insurance juggernaut...",
     status: "Previously",
     linkLabel: "Discover more about Hagerty",
-    link: "https://hagerty.com",
-    image: "/estudio.jpg",
+    link: "/projects/3", // Enlace dinámico basado en el id del proyecto
+    image: "/estudio.jpg", // Ruta ajustada de la imagen
   }
-  
+];
+
+
+export const projectsData = [
+  {
+    id: 1,
+    title: "Chief Digital Officer, Athletic Greens",
+    info: "We are the developers of AG1, the leading powdered beverage designed to provide daily foundational nutrition...",
+    imgSrc: "/verificacion.jpeg", // Ruta de la imagen
+  },
+  {
+    id: 2,
+    title: "Founder & lead investor, Axacraft",
+    info: "Axacraft was founded in August 2022 to address a substantial market gap...",
+    imgSrc: "/conexion.jpg",
+  },
+  {
+    id: 3,
+    title: "I led Product, Engineering, Design, and IT at Hagerty",
+    info: "You may know us as the classic car insurance juggernaut...",
+    imgSrc: "/estudio.jpg",
+  },
 ];

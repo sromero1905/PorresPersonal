@@ -58,7 +58,7 @@ const Grid = () => {
           variants={fadeInUp}
         >
           <h2 className="text-white text-4xl font-bold mb-8">
-            Kelly Smith biography
+            Francisco Romero biography
           </h2>
           <p className="text-neutral-400 text-xl leading-relaxed">
             Mr. Smith oversees all aspects of digital transformation, including team building, customer experience, 
