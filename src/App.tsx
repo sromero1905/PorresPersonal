@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'; // Importa Routes y Route para el enrutamiento
+import Home from './pages/home';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes> {/* Define tus rutas aquí */}
+      <Route path="/" element={<Home />} /> {/* Ruta para la página de inicio */}
+
+      {/* Agrega más rutas según sea necesario */}
+    </Routes>
   );
-}
+};
 
 export default App;
