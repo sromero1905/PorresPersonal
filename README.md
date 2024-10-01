@@ -1,62 +1,46 @@
-# **🌟 Proyecto Personal Page Cliente**
+# Getting Started with Create React App
 
-![Proyecto Personal Page Cliente](https://via.placeholder.com/1200x300.png?text=Personal+Page+Cliente)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![Build Status](https://img.shields.io/badge/Build-Status-green)](https://github.com/tu-usuario/proyecto-personal-page-cliente/actions)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange)](https://github.com/tu-usuario/proyecto-personal-page-cliente)
-[![Last Commit](https://img.shields.io/github/last-commit/tu-usuario/proyecto-personal-page-cliente)](https://github.com/tu-usuario/proyecto-personal-page-cliente/commits/main)
+## Available Scripts
 
-**Landing page minimalista diseñada para un cliente, enfocada en la estética, simplicidad y funcionalidad.**
+In the project directory, you can run:
 
----
+### `npm start`
 
-## **Descripción del Proyecto**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Proyecto Personal Page Cliente** es una landing page desarrollada con un enfoque minimalista para ofrecer una presencia en línea elegante y moderna. El diseño utiliza una paleta de colores monocromática y animaciones suaves para crear una experiencia visual atractiva y profesional. Este proyecto muestra habilidades en diseño web y desarrollo frontend, utilizando tecnologías actuales para asegurar un resultado de alta calidad.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
----
+### `npm test`
 
-## **Características del Proyecto**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **Diseño Minimalista:** Enfoque en una interfaz limpia y centrada en lo esencial.
-- **Paleta de Colores Monocromática:** Exclusivo uso de colores en blanco, negro y grises para una apariencia sofisticada.
-- **Transiciones Suaves:** Animaciones delicadas para una experiencia de usuario fluida.
-- **Tipografía Elegante:** Fuentes modernas para mejorar la legibilidad y el diseño general.
-- **Responsive:** Adaptabilidad a diferentes dispositivos y tamaños de pantalla.
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## **Tecnologías Utilizadas**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- **Frontend:** React, TypeScript
-- **Estilos:** TailwindCSS
-- **Herramientas:** Vite, ESLint
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `npm run eject`
 
-## **Instalación y Ejecución**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Para ejecutar este proyecto localmente, sigue estos pasos:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```bash
-# Clona el repositorio
-git clone https://github.com/tu-usuario/proyecto-personal-page-cliente.git
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-# Navega al directorio del proyecto
-cd proyecto-personal-page-cliente
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# Instala las dependencias
-npm install
+## Learn More
 
-# Inicia el servidor de desarrollo
-npm run dev
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Licencia
-
-Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
-
-¡Gracias por visitar el proyecto! 🚀
-
-
-Este formato está listo para usar en un archivo README.md.
+To learn React, check out the [React documentation](https://reactjs.org/).
