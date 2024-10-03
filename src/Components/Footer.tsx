@@ -11,7 +11,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-10 px-5 md:px-20">
+    <footer className="bg-darkblue py-10 px-5 md:px-20"> {/* Cambiado a bg-darkblue */}
       <div className="flex flex-col items-center">
         <div className="flex gap-6 mb-8">
           {socialLinks.map((link, index) => (
@@ -23,10 +23,10 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1,
-                delay: index * 0.2, // Animación en secuencia
+                delay: index * 0.2,
                 ease: "easeOut",
               }}
-              whileHover={{ scale: 1.05, opacity: 0.9 }} // Hover sutil y tranquilo
+              whileHover={{ scale: 1.05, opacity: 0.9 }}
             >
               {link.icon}
             </motion.a>

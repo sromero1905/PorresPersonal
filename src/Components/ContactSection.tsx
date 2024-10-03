@@ -9,7 +9,7 @@ const ContactSection: React.FC = () => {
   const checkVisibility = () => {
     if (sectionRef.current) {
       const rect = sectionRef.current.getBoundingClientRect();
-      const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0; // Verificar si está parcialmente visible
       setIsVisible(isInView);
     }
   };
@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, delay, ease: "easeOut" },
+      transition: { duration: 0.8, delay, ease: "easeOut" }, // Reducido a 0.8
     },
   });
 

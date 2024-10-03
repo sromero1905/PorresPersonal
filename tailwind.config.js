@@ -22,7 +22,8 @@ const config = {
     },
     extend: {
       colors: {
-        "ultra-dark-gray": "#1c1c1c", // Definición del color personalizado
+        "ultra-dark-gray": "#1c1c1c",
+        "darkblue": '#0d0d0d',
         black: {
           DEFAULT: "#000",
           100: "#000319",
@@ -94,7 +95,7 @@ const config = {
           },
           "100%": {
             opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
+            transform: "translate(-50%, -40%) scale(1)",
           },
         },
         shimmer: {
