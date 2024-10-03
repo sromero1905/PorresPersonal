@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useInView } from "react-intersection-observer";
 
 const ContactSection: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  const checkVisibility = () => {
+    if (sectionRef.current) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      setIsVisible(isInView);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Para comprobar la visibilidad al cargar
+
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+    };
+  }, []);
 
   // Definimos las variantes de animación para los elementos
   const fadeInUp = (delay: number) => ({
@@ -21,14 +35,14 @@ const ContactSection: React.FC = () => {
 
   return (
     <section
-      ref={ref}
+      ref={sectionRef}
       className="bg-black text-white py-20 px-8 md:px-16 lg:px-32 flex flex-col items-center"
     >
       {/* Sección del título y la imagen */}
       <motion.div
         className="flex items-center space-x-4 mb-12"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={isVisible ? "visible" : "hidden"}
         variants={fadeInUp(0.5)}
       >
         <img
@@ -45,7 +59,7 @@ const ContactSection: React.FC = () => {
       <motion.hr
         className="w-full max-w-3xl my-12 border-gray-700"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={isVisible ? "visible" : "hidden"}
         variants={fadeInUp(1)}
       />
 
@@ -53,7 +67,7 @@ const ContactSection: React.FC = () => {
       <motion.div
         className="flex space-x-8 mb-12"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={isVisible ? "visible" : "hidden"}
         variants={fadeInUp(1.5)}
       >
         <div className="flex items-center bg-gray-800 px-8 py-4 rounded-full shadow-md transition transform hover:scale-105 hover:-translate-y-0.25 duration-500 ease-in-out">
@@ -68,7 +82,7 @@ const ContactSection: React.FC = () => {
       <motion.div
         className="relative"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={isVisible ? "visible" : "hidden"}
         variants={fadeInUp(2)}
       >
         <button className="relative group overflow-hidden bg-white text-black border border-gray-400 rounded-full py-5 px-12 text-lg font-semibold shadow-lg">
