@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -51,6 +53,7 @@ export const projectsinfo = [
       "We are the developers of AG1, the leading powdered beverage designed to provide daily foundational nutrition...",
     image: "/images/ag1.jpg",
     details: "As CDO of Athletic Greens, I was responsible for the digital transformation...",
+    link:"https://www.conexionconstructiva.com.ar"
   },
   {
     id: 2,
@@ -59,6 +62,7 @@ export const projectsinfo = [
       "Axacraft was founded to address the needs of the digital transformation market...",
     image: "/images/axacraft.jpg",
     details: "Axacraft has revolutionized consulting with a unique approach...",
+    link:"https://frpa-server.vercel.app"
   },
   {
     id: 3,
@@ -67,5 +71,6 @@ export const projectsinfo = [
       "Hagerty is the global leader in classic car insurance...",
     image: "/images/hagerty.jpg",
     details: "I led the digital strategy at Hagerty...",
+    link:"http://veosa.com.ar"
   }
 ];
