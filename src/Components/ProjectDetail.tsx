@@ -1,18 +1,25 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projectsinfo } from "../data/index";
-import { motion } from "framer-motion"; // Importa framer-motion
-import { FiArrowLeft } from "react-icons/fi"; // Importa un ícono de flecha
+import { motion } from "framer-motion";
+import { FiArrowLeft } from "react-icons/fi";
+import { FloatingNav } from "./ui/FloatingNavbar";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projectsinfo.find((proj) => proj.id === parseInt(id || "0"));
 
+  // Scroll a la parte superior al cargar el componente
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (!project) {
     return (
-      <div className="py-24 px-8 bg-black text-white">
-        <h2 className="text-3xl font-bold">Proyecto no encontrado</h2>
-        <Link to="/" className="text-blue-500 underline mt-4 block">
+      <div className="min-h-screen flex flex-col justify-center items-center bg-black text-white">
+        <h2 className="text-4xl font-bold mb-6">Proyecto no encontrado</h2>
+        <Link to="/" className="text-gray-400 hover:text-gray-300 underline inline-flex items-center">
           <FiArrowLeft className="inline mr-2" />
           Volver a la lista de proyectos
         </Link>
@@ -21,50 +28,100 @@ const ProjectDetail = () => {
   }
 
   return (
-    <motion.div 
-      className="min-h-screen bg-gray-900 flex flex-col items-center py-12"
-      initial={{ opacity: 0, y: 20 }} // Animación de entrada
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }} // Duración de la animación
+    <motion.div
+      className="min-h-screen bg-black flex flex-col items-center py-20 px-4 lg:px-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }} // Transición de carga
     >
-      <div className="bg-gray-800 shadow-xl rounded-lg max-w-3xl w-full p-8 space-y-6"> {/* Agregado space-y-6 */}
+      {/* Navbar flotante */}
+      <FloatingNav
+        navItems={[
+          { name: "Inicio", link: "/" },
+          { name: "Proyectos", link: "/projects" },
+          { name: "Contacto", link: "/contact" },
+        ]}
+      />
+
+      {/* Contenedor principal */}
+      <div className="relative w-full max-w-5xl mb-12"> {/* Aumentar max-w para mayor ancho */}
+        {/* Imagen principal - Ajustes para estar menos larga y más ancha */}
         <motion.img
           src={project.image}
           alt={project.title}
-          className="w-full h-64 object-cover rounded-lg"
-          initial={{ opacity: 0 }} // Animación para la imagen
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }} // Retardo para una entrada más suave
+          className="w-full h-[600px] object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" // Aumentar altura a 600px
+          initial={{ opacity: 0, y: 20 }} // Entrada más suave
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.2, ease: "easeInOut" }} // Transición más suave
+          style={{ marginTop: '-20px' }} // Ajuste para que la imagen esté más arriba
         />
-        <h1 className="text-4xl font-semibold text-white">{project.title}</h1>
+        {/* Título sobre la imagen - Mejorado */}
+        <motion.div
+          className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 rounded-b-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }} // Transición más tranquila
+        >
+          <h1 className="text-4xl font-bold text-white">{project.title}</h1>
+        </motion.div>
+      </div>
 
-        <div className="details space-y-6">
-          <div className="detail1">
-            <h2 className="text-xl font-semibold text-white">Descripción</h2>
-            <p className="text-gray-400 text-lg leading-relaxed">{project.details.detail1}</p>
-          </div>
-          <div className="detail2">
-            <h2 className="text-xl font-semibold text-white">Aspectos Clave</h2>
-            <p className="text-gray-400 text-lg leading-relaxed">{project.details.detail2}</p>
-          </div>
-        </div>
+      {/* Sección de detalles del proyecto */}
+      <div className="w-full max-w-3xl space-y-8 text-gray-300">
+        <motion.div
+          className="leading-relaxed"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: "easeInOut" }} // Transición más suave
+          viewport={{ once: false }}
+        >
+          <h2 className="text-3xl font-semibold text-white mb-2">Descripción</h2>
+          <p className="text-lg">{project.details.detail1}</p>
+        </motion.div>
 
-        <div className="flex justify-center mb-6"> {/* Margen inferior agregado */}
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-10 rounded-full transition-all duration-300 ease-in-out shadow-lg"
-          >
-            Visitar página del proyecto
-          </a>
-        </div>
+        <motion.div
+          className="leading-relaxed"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.7, ease: "easeInOut" }} // Transición más suave
+          viewport={{ once: false }}
+        >
+          <h2 className="text-3xl font-semibold text-white mb-2">Aspectos Clave</h2>
+          <p className="text-lg">{project.details.detail2}</p>
+        </motion.div>
+      </div>
 
-        <Link to="/" className="text-blue-400 inline-flex items-center hover:text-blue-500 transition-colors">
+      {/* Botón para visitar la página del proyecto */}
+      <motion.div
+        className="mt-12"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.9, ease: "easeInOut" }} // Transición más suave
+        viewport={{ once: false }}
+      >
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300"
+        >
+          Visitar página del proyecto
+        </a>
+      </motion.div>
+
+      {/* Enlace para volver a la lista de proyectos */}
+      <motion.div
+        className="mt-8"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 1, ease: "easeInOut" }} // Transición más suave
+        viewport={{ once: false }}
+      >
+        <Link to="/" className="text-gray-400 inline-flex items-center hover:text-gray-300 transition-colors">
           <FiArrowLeft className="mr-2" />
           Volver a la lista de proyectos
         </Link>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
