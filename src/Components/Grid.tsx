@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; // Importamos framer-motion
-
+import { Link } from 'react-router-dom';
 const Grid = () => {
   // Definimos las variantes de la animación
   const fadeInUp = {
@@ -28,26 +28,23 @@ const Grid = () => {
         </motion.div>
 
         {/* Segunda Card: Texto Grande */}
-      
-
-          {/* Segunda Card: Texto Grande */}
-          <motion.div 
-            className="bg-neutral-900 rounded-2xl shadow-2xl w-full max-w-5xl p-16"
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true, amount: 0.2 }} 
-            variants={fadeInUp}
-          >
-            <h2 className="text-white text-4xl font-bold mb-8">
-              From entrepreneurship to Fortune 100
-            </h2>
-            <p className="text-neutral-400 text-xl leading-relaxed">
-              Leveraging 25 years of experience, I've founded companies and worked at Fortune 100 companies. 
-              As a hands-on technology leader, I am proud that each and every day, millions of people use products 
-              I've helped to build. Today, I primarily focus on Digital Transformation projects as the world 
-              increasingly looks to technology to achieve their business ambitions.
-            </p>
-          </motion.div>
+        <motion.div 
+          className="bg-neutral-900 rounded-2xl shadow-2xl w-full max-w-5xl p-16"
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.2 }} 
+          variants={fadeInUp}
+        >
+          <h2 className="text-white text-4xl font-bold mb-8">
+            From entrepreneurship to Fortune 100
+          </h2>
+          <p className="text-neutral-400 text-xl leading-relaxed">
+            Leveraging 25 years of experience, I've founded companies and worked at Fortune 100 companies. 
+            As a hands-on technology leader, I am proud that each and every day, millions of people use products 
+            I've helped to build. Today, I primarily focus on Digital Transformation projects as the world 
+            increasingly looks to technology to achieve their business ambitions.
+          </p>
+        </motion.div>
 
         {/* Tercera Card: Información ampliada */}
         <motion.div 
@@ -90,6 +87,18 @@ const Grid = () => {
             Outside of work, Kelly is an avid car enthusiast, a hobby that aligns perfectly with his professional 
             experience in the automotive industry.
           </p>
+
+          {/* Botón minimalista para más información */}
+          <Link to="/more-info">
+            <motion.button
+              className="mt-8 px-8 py-3 border border-white text-white rounded-full hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+            >
+              More Information
+            </motion.button>
+          </Link>
         </motion.div>
 
       </div>
