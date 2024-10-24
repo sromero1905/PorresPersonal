@@ -62,7 +62,7 @@ export const FloatingNav = ({
           ease: "easeInOut", // Transición suave
         }}
         className={cn(
-          "flex max-w-full fixed z-[5000] top-0 inset-x-0 mx-auto py-3 items-center justify-between px-6",
+          "flex max-w-full fixed z-[5000] top-0 inset-x-0 mx-auto py-3 items-center justify-between px-6 mt-7", // Añadido mt-4 para margen superior
           className
         )}
       >
@@ -75,7 +75,7 @@ export const FloatingNav = ({
             duration: 0.5,
             ease: "easeInOut",
           }}
-          className="text-white text-lg font-light tracking-wider mr-4" // Añadido mr-4 para margen derecho
+          className="text-white text-xl font-light tracking-wider mr-4" // Aumentado de text-lg a text-xl
         >
           Francisco Romero
         </motion.div>
@@ -95,7 +95,7 @@ export const FloatingNav = ({
             <Link
               key={`link=${idx}`}
               to={navItem.link} // Cambiar href a to
-              className="text-white text-base hover:text-gray-400 transition-colors duration-200" // Cambiado text-sm a text-base
+              className="text-white text-lg hover:text-gray-400 transition-colors duration-200" // Cambiado de text-base a text-lg
             >
               {navItem.name}
             </Link>

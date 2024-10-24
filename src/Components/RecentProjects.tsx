@@ -13,8 +13,8 @@ const RecentProjects = () => {
   return (
     <div className="py-24 px-8 bg-black">
       <h1 className="text-5xl font-bold text-white text-center">
-        A small selection of{" "}
-        <span className="text-[#D3D3D3]">my projects</span>
+      Un recorrido por {" "}
+        <span className="text-[#D3D3D3]">mis proyectos</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">

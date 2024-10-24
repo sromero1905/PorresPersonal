@@ -12,20 +12,19 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "Chief Digital Officer, Athletic Greens",
+    title: "Conexión Constructiva",
     description:
-      "We are the developers of AG1, the leading powdered beverage designed to provide daily foundational nutrition...",
-    status: "Previously",
-    linkLabel: "Athletic Greens valued at $1.2B",
+      "Transformamos empresas inmobiliarias mediante coaching ontológico y PNL, fortaleciendo relaciones comerciales y promoviendo un crecimiento estratégico...",
+    status: "Coaching",
     link: "/projects/1", // Enlace dinámico basado en el id del proyecto
     image: "/verificacion.jpeg", // Ruta ajustada de la imagen
   },
   {
     id: 2,
-    title: "Founder & lead investor, Axacraft",
+    title: "Romero Porres Asociados",
     description:
-      "Axacraft was founded in August 2022 to address a substantial market gap...",
-    status: "Currently",
+      "Ofrecemos asistencia integral en el ámbito inmobiliario, guiando a los clientes en cada etapa de sus transacciones y proyectos, con enfoque en seguridad, eficacia y confianza...",
+    status: "Legal",
     linkLabel: "What if everything we knew about consulting was wrong?",
     link: "/projects/2", // Enlace dinámico basado en el id del proyecto
     image: "/conexion.jpg", // Ruta ajustada de la imagen
@@ -33,10 +32,10 @@ export const projects = [
   {
     id: 3,
     title:
-      "I led Product, Engineering, Design, and IT at Hagerty - the global leader in classic car insurance.",
+      "Verificadora Externa De Obra",
     description:
-      "You may know us as the classic car insurance juggernaut...",
-    status: "Previously",
+      "Brindamos consultoría inmobiliaria enfocada en certificación, inspección y verificación de inmuebles, garantizando seguridad, transparencia y calidad en cada proyecto..",
+    status: "Verifación",
     linkLabel: "Discover more about Hagerty",
     link: "/projects/3", // Enlace dinámico basado en el id del proyecto
     image: "/estudio.jpg", // Ruta ajustada de la imagen

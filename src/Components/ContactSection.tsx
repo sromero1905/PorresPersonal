@@ -45,13 +45,9 @@ const ContactSection: React.FC = () => {
         animate={isVisible ? "visible" : "hidden"}
         variants={fadeInUp(0.5)}
       >
-        <img
-          src="https://via.placeholder.com/100"
-          alt="Profile"
-          className="rounded-full w-20 h-20 object-cover"
-        />
+       
         <h1 className="text-6xl font-semibold leading-tight">
-          Let’s work together
+          Trabajemos juntos!
         </h1>
       </motion.div>
 
@@ -71,7 +67,7 @@ const ContactSection: React.FC = () => {
         variants={fadeInUp(1.5)}
       >
         <div className="flex items-center bg-gray-800 px-8 py-4 rounded-full shadow-md transition transform hover:scale-105 hover:-translate-y-0.25 duration-500 ease-in-out">
-          <span className="text-lg">info@dennissnellenberg.com</span>
+          <span className="text-lg">info@romeroporres.com</span>
         </div>
         <div className="flex items-center bg-gray-800 px-8 py-4 rounded-full shadow-md transition transform hover:scale-105 hover:-translate-y-0.25 duration-500 ease-in-out">
           <span className="text-lg">+31 6 27 84 74 30</span>
