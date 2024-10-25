@@ -1,8 +1,6 @@
-"use client";
-
-import { projects } from '../data/index';
+import { projects } from '../lib/data/index';
 import { motion } from "framer-motion"; 
-import { Link } from 'react-router-dom'; // Importar Link de react-router-dom
+import { Link } from 'react-router-dom'; 
 
 const RecentProjects = () => {
   const fadeInUp = {
@@ -13,14 +11,14 @@ const RecentProjects = () => {
   return (
     <div className="py-24 px-8 bg-black">
       <h1 className="text-5xl font-bold text-white text-center">
-      Un recorrido por {" "}
+        Un recorrido por {" "}
         <span className="text-[#D3D3D3]">mis proyectos</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
         {/* Primera tarjeta */}
         <motion.div
-          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-96"
+          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[28rem] md:h-96"
           key={projects[0].id}
           initial="hidden"
           whileInView="visible"
@@ -52,7 +50,7 @@ const RecentProjects = () => {
 
         {/* Segunda tarjeta */}
         <motion.div
-          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-96"
+          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[28rem] md:h-96"
           key={projects[1].id}
           initial="hidden"
           whileInView="visible"
@@ -85,7 +83,7 @@ const RecentProjects = () => {
 
       {/* Tarjeta grande */}
       <motion.div
-        className="relative mt-12 rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[32rem]"
+        className="relative mt-12 rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[36rem] md:h-[32rem]"
         key={projects[2].id}
         initial="hidden"
         whileInView="visible"

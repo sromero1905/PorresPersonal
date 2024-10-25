@@ -28,7 +28,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }} // Animación más rápida
       >
         <motion.h1
-          className="text-white text-5xl font-bold"
+          className="text-white text-4xl md:text-5xl font-bold" // Tamaño de texto más pequeño en móviles
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }} // Con un pequeño retraso
@@ -36,12 +36,12 @@ const HeroSection = () => {
           Hello, I'm Francisco Romero.
         </motion.h1>
         <motion.p
-          className="text-gray-400 text-xl mt-4"
+          className="text-gray-400 text-lg md:text-xl mt-4" // Ajuste de tamaño para el subtítulo
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Mayor retraso para el subtítulo
         >
-          I am the former Head of Digital at Starbucks, Athletic Greens and MGM Resorts.
+          Former Head of Digital at Starbucks and MGM Resorts.
         </motion.p>
       </motion.div>
     </section>

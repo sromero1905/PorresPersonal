@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { projectsinfo } from "../data/index";
+import { projectsinfo } from "../lib/data/index";
 import { motion } from "framer-motion";
 import { FiArrowLeft } from "react-icons/fi";
 import { FloatingNav } from "./ui/FloatingNavbar";
@@ -9,10 +9,23 @@ import { FloatingNav } from "./ui/FloatingNavbar";
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projectsinfo.find((proj) => proj.id === parseInt(id || "0"));
+  
+  // Estado para manejar el tamaño de la pantalla
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  // Scroll a la parte superior al cargar el componente
   useEffect(() => {
+    // Función para actualizar el estado del tamaño de la pantalla
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Scroll a la parte superior al cargar el componente
     window.scrollTo(0, 0);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!project) {
@@ -78,7 +91,7 @@ const ProjectDetail = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-semibold text-white mb-2">Descripción</h2>
-          <p className="text-lg">{project.details.detail1}</p>
+          <p className="text-lg">{isMobile ? project.details.detail1.mobile : project.details.detail1.full}</p>
         </motion.div>
 
         <motion.div
@@ -89,7 +102,7 @@ const ProjectDetail = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-semibold text-white mb-2">Aspectos Clave</h2>
-          <p className="text-lg">{project.details.detail2}</p>
+          <p className="text-lg">{isMobile ? project.details.detail2.mobile : project.details.detail2.full}</p>
         </motion.div>
 
         {/* Nueva sección para detail3 */}
@@ -101,7 +114,7 @@ const ProjectDetail = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-semibold text-white mb-2">Conclusiones</h2>
-          <p className="text-lg">{project.details.detail3}</p>
+          <p className="text-lg">{isMobile ? project.details.detail3.mobile : project.details.detail3.full}</p>
         </motion.div>
       </div>
 
@@ -112,38 +125,14 @@ const ProjectDetail = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true }}
         >
           <img
             src={project.additionalImage}
-            alt="Imagen adicional"
-            className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            alt={`Imagen adicional de ${project.title}`}
+            className="w-full h-[400px] object-cover rounded-lg shadow-lg"
           />
         </motion.div>
       )}
-
-      {/* Botón para visitar la página del proyecto */}
-      <div className="mt-8">
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-4 px-8 rounded-full transition-all duration-300"
-        >
-          Visitar página del proyecto
-        </a>
-      </div>
-
-      {/* Enlace para volver a la lista de proyectos */}
-      <div className="mt-8">
-        <Link
-          to="/"
-          className="text-gray-400 inline-flex items-center hover:text-gray-300 transition-colors"
-        >
-          <FiArrowLeft className="mr-2" />
-          Volver a la lista de proyectos
-        </Link>
-      </div>
     </motion.div>
   );
 };

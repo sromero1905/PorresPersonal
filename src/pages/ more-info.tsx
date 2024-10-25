@@ -33,7 +33,7 @@ const MoreInfo: React.FC = () => {
         viewport={{ once: true }}
         variants={fadeIn}
       >
-        Francisco es un líder en transformación digital, reconocido por su capacidad para impulsar la innovación y la eficiencia en diversas industrias. Su enfoque centrado en el usuario ha permitido a numerosas organizaciones adaptarse a la era digital y prosperar en un entorno empresarial en constante cambio.
+        Francisco es un líder en transformación digital, reconocido por su capacidad para impulsar la innovación y la eficiencia en diversas industrias. 
       </motion.p>
 
       {/* Sección de biografía */}
@@ -45,13 +45,18 @@ const MoreInfo: React.FC = () => {
         variants={fadeIn}
       >
         <h2 className="text-3xl font-semibold mb-4">Biografía</h2>
-        <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+        {/* Versión corta para móviles */}
+        <p className="text-neutral-400 text-lg leading-relaxed mb-4 block md:hidden">
+          Francisco, con más de 25 años de experiencia, ha sido mentor de startups y un referente en su campo.
+        </p>
+        {/* Versión larga para pantallas grandes */}
+        <p className="text-neutral-400 text-lg leading-relaxed mb-4 hidden md:block">
           Con más de 25 años de experiencia en el ámbito digital, Francisco ha ocupado roles estratégicos en empresas de Fortune 100 y ha sido mentor de startups. Su pasión por la tecnología y la innovación lo han llevado a ser un referente en su campo, enfocándose en crear soluciones sostenibles y escalables que impulsan el crecimiento organizacional.
         </p>
-        <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+        <p className="text-neutral-400 text-lg leading-relaxed mb-4 hidden md:block">
           Francisco es un defensor del uso de la tecnología para el bien social y la sostenibilidad. Ha trabajado en proyectos que no solo benefician a las empresas, sino que también promueven el desarrollo sostenible y la responsabilidad social corporativa.
         </p>
-        <p className="text-neutral-400 text-lg leading-relaxed">
+        <p className="text-neutral-400 text-lg leading-relaxed hidden md:block">
           A través de su carrera, ha demostrado una habilidad única para transformar desafíos complejos en oportunidades, alineando estrategias de negocio con tecnologías emergentes para garantizar el éxito a largo plazo.
         </p>
       </motion.div>
@@ -86,7 +91,6 @@ const MoreInfo: React.FC = () => {
           <li><strong>Chief Digital Officer</strong> - Empresa XYZ (2018 - Presente): Lidera la estrategia digital y la innovación tecnológica.</li>
           <li><strong>Director de Innovación</strong> - Empresa ABC (2015 - 2018): Implementó soluciones digitales que aumentaron la eficiencia operativa y mejoraron la experiencia del cliente.</li>
           <li><strong>Consultor en Transformación Digital</strong> - Empresa 123 (2010 - 2015): Asesoró a empresas en su camino hacia la digitalización, ayudándolas a adoptar tecnologías emergentes y a optimizar procesos.</li>
-          <li><strong>Mentor de Startups</strong> - Diversas organizaciones (2015 - Presente): Ha guiado a nuevas empresas en sus esfuerzos por innovar y crecer en el espacio digital.</li>
         </ul>
       </motion.div>
 

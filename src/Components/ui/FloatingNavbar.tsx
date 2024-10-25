@@ -62,7 +62,7 @@ export const FloatingNav = ({
           ease: "easeInOut", // Transición suave
         }}
         className={cn(
-          "flex max-w-full fixed z-[5000] top-0 inset-x-0 mx-auto py-3 items-center justify-between px-6 mt-7", // Añadido mt-4 para margen superior
+          "hidden md:flex max-w-full fixed z-[5000] top-0 inset-x-0 mx-auto py-3 items-center justify-between px-6 mt-7", // Cambiado a "hidden md:flex" para ocultar en móviles
           className
         )}
       >

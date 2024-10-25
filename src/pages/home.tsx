@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "../data";
+import { navItems } from "../lib/data";
 
 import HeroSection from "../Components/Hero";
 import Grid from "../Components/Grid";

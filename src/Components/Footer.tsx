@@ -11,14 +11,14 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-darkblue py-10 px-5 md:px-20"> {/* Cambiado a bg-darkblue */}
+    <footer className="bg-darkblue py-8 px-4 md:px-16 lg:px-20">
       <div className="flex flex-col items-center">
-        <div className="flex gap-6 mb-8">
+        <div className="flex gap-4 sm:gap-6 mb-6 sm:mb-8">
           {socialLinks.map((link, index) => (
             <motion.a
               key={link.id}
               href={link.href}
-              className="w-16 h-16 flex justify-center items-center rounded-lg bg-gray-800 text-white"
+              className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex justify-center items-center rounded-lg bg-gray-800 text-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -32,7 +32,7 @@ const Footer = () => {
             </motion.a>
           ))}
         </div>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-xs sm:text-sm lg:text-base text-center">
           © 2024 Francisco Romero Porres. All rights reserved.
         </p>
       </div>
@@ -41,3 +41,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
