@@ -16,7 +16,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^11.3.31",
+    "framer-motion": "^11.11.10",
     "glob": "^11.0.0",
     "inflight": "^1.0.6",
     "lucide-react": "^0.365.0",

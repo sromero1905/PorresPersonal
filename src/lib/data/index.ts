@@ -160,6 +160,39 @@ export const projectsinfo = [
       },
     },
     link: "http://veosa.com.ar"
+  }, 
+  {
+  id: 4,
+  title: "Consorcio Inteligente SA",
+  image: "../../consorcio-details.jpg",
+  additionalImage: "../../consorcio2.jpg", // Imagen adicional
+  details: {
+    detail1: {
+      full: `
+        En Consorcio Inteligente SA, nuestra misión es revolucionar la administración de consorcios con soluciones de inteligencia artificial y automatización. Nos enfocamos en simplificar la gestión, reducir costos operativos y mejorar la eficiencia en cada área. Desde la recolección de datos en tiempo real hasta la generación de reportes personalizados, brindamos herramientas innovadoras que permiten a los administradores y residentes gestionar con facilidad sus espacios y recursos. Con un equipo multidisciplinario, nos aseguramos de ofrecer un servicio integral y adaptado a las necesidades de cada cliente.
+      `,
+      mobile: `
+        Simplificamos la administración de consorcios con IA, mejorando eficiencia y reduciendo costos en la gestión de espacios y recursos.
+      `,
+    },
+    detail2: {
+      full: `
+        Nuestro enfoque incluye la automatización de tareas rutinarias como el seguimiento de pagos, la generación de informes financieros y la gestión de incidencias, permitiendo una administración más fluida y segura. Además, hemos desarrollado un sistema de comunicación eficiente para conectar a los residentes con la administración en tiempo real, resolviendo problemas de manera rápida y eficaz. Con un fuerte énfasis en la seguridad, aseguramos que cada transacción y cada gestión de información se realicen conforme a los estándares de protección de datos y ciberseguridad, ofreciendo a nuestros clientes la tranquilidad de una plataforma confiable.
+      `,
+      mobile: `
+        Automatizamos tareas como el seguimiento de pagos y la gestión de incidencias, asegurando una administración fluida y segura para cada consorcio.
+      `,
+    },
+    detail3: {
+      full: `
+        En Consorcio Inteligente SA, entendemos la importancia de estar a la vanguardia tecnológica. Realizamos un análisis exhaustivo de cada consorcio para ofrecer soluciones de IA personalizadas que optimicen sus recursos y mejoren la convivencia. También proporcionamos capacitación continua para administradores y residentes sobre el uso de nuestras herramientas, asegurando que todos puedan aprovechar al máximo nuestras soluciones de automatización. Cada proyecto es una oportunidad para generar valor y construir comunidades más eficientes, seguras y conectadas.
+      `,
+      mobile: `
+        Analizamos cada consorcio para ofrecer IA personalizada, optimizando recursos y mejorando la convivencia entre los residentes.
+      `,
+    },
   },
+  link: "http://consorciointeligente.com",}
+
  
 ];

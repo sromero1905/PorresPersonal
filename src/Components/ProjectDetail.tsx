@@ -10,21 +10,16 @@ const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projectsinfo.find((proj) => proj.id === parseInt(id || "0"));
   
-  // Estado para manejar el tamaño de la pantalla
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    // Función para actualizar el estado del tamaño de la pantalla
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
-
-    // Scroll a la parte superior al cargar el componente
     window.scrollTo(0, 0);
 
-    // Cleanup listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -50,7 +45,6 @@ const ProjectDetail = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      {/* Navbar flotante */}
       <FloatingNav
         navItems={[
           { name: "Inicio", link: "/" },
@@ -59,18 +53,15 @@ const ProjectDetail = () => {
         ]}
       />
 
-      {/* Contenedor principal */}
       <div className="relative w-full max-w-5xl mb-12">
-        {/* Imagen principal */}
         <motion.img
           src={project.image}
           alt={project.title}
           className="w-full h-[600px] object-cover rounded-lg shadow-lg"
-          initial={{ opacity: 0, y: 10 }} // Movimiento más sutil
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         />
-        {/* Título sobre la imagen */}
         <motion.div
           className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 rounded-b-lg"
           initial={{ opacity: 0 }}
@@ -81,7 +72,6 @@ const ProjectDetail = () => {
         </motion.div>
       </div>
 
-      {/* Sección de detalles del proyecto */}
       <div className="w-full max-w-3xl space-y-8 text-gray-300">
         <motion.div
           className="leading-relaxed"
@@ -105,7 +95,6 @@ const ProjectDetail = () => {
           <p className="text-lg">{isMobile ? project.details.detail2.mobile : project.details.detail2.full}</p>
         </motion.div>
 
-        {/* Nueva sección para detail3 */}
         <motion.div
           className="leading-relaxed"
           initial={{ opacity: 0 }}
@@ -118,7 +107,6 @@ const ProjectDetail = () => {
         </motion.div>
       </div>
 
-      {/* Imagen adicional */}
       {project.additionalImage && (
         <motion.div
           className="w-full max-w-5xl mt-12 mb-8"
@@ -133,6 +121,32 @@ const ProjectDetail = () => {
           />
         </motion.div>
       )}
+
+      {/* Botones minimalistas */}
+      <motion.div
+        className="mt-12 flex flex-col space-y-4 items-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+      >
+        {/* Condición para ocultar el botón si el id es 4 */}
+        {project.id !== 4 && (
+          <a
+            href={project.link} // Suponiendo que 'link' es la propiedad en projectsinfo que contiene el URL
+            target="_blank" // Esto abrirá el enlace en una nueva pestaña
+            rel="noopener noreferrer" // Mejora la seguridad al abrir el enlace en otra pestaña
+            className="inline-block bg-transparent border border-neutral-600 text-neutral-400 px-6 py-2 rounded-full hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out text-md"
+          >
+            Ir a la página del proyecto
+          </a>
+        )}
+        <Link
+          to="/"
+          className="inline-block bg-transparent border border-neutral-600 text-neutral-400 px-6 py-2 rounded-full hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out text-md"
+        >
+          Volver al Home
+        </Link>
+      </motion.div>
     </motion.div>
   );
 };
