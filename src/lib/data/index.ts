@@ -39,6 +39,16 @@ export const projects = [
     linkLabel: "Discover more about Hagerty",
     link: "/projects/3", // Enlace dinámico basado en el id del proyecto
     image: "/estudio.jpg", // Ruta ajustada de la imagen
+  },
+  {
+    id:4,
+    title: "Portal Automatizado de Servicios para Consorcios",
+    description:
+      "Creamos un portal en línea que centraliza la gestión de servicios, pagos y documentación, permitiendo a administradores y residentes acceder y gestionar la información en tiempo real, desde cualquier dispositivo.",
+    status: "Gestión Centralizada",
+    linkLabel: "Descubre nuestro portal",
+    link: "/projects/4", // Enlace dinámico basado en el id del proyecto
+    image: "/portal_servicios.jpg", // Ruta ajustada de la imagen
   }
 ];
 
@@ -150,5 +160,6 @@ export const projectsinfo = [
       },
     },
     link: "http://veosa.com.ar"
-  }
+  },
+ 
 ];

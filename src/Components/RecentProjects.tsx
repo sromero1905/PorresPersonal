@@ -79,39 +79,71 @@ const RecentProjects = () => {
             </div>
           </div>
         </motion.div>
-      </div>
 
-      {/* Tarjeta grande */}
-      <motion.div
-        className="relative mt-12 rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[36rem] md:h-[32rem]"
-        key={projects[2].id}
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${projects[2].image})` }}
-        ></div>
-        <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <div className="relative z-10 p-10">
-          <p className="text-sm uppercase text-white opacity-70">
-            {projects[2].status}
-          </p>
-          <h2 className="text-4xl font-bold mt-4 text-white">
-            {projects[2].title}
-          </h2>
-          <p className="mt-4 text-xl text-white">
-            {projects[2].description}
-          </p>
-          <div className="relative z-10 mt-8">
-            <Link to={`/projects/${projects[2].id}`} className="text-white underline text-xl">
-              Ver detalles
-            </Link>
+        {/* Tercera tarjeta */}
+        <motion.div
+          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[28rem] md:h-96"
+          key={projects[2].id}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${projects[2].image})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+          <div className="relative z-10 p-8">
+            <p className="text-sm uppercase text-white opacity-70">
+              {projects[2].status}
+            </p>
+            <h2 className="text-3xl font-bold mt-4 text-white">
+              {projects[2].title}
+            </h2>
+            <p className="mt-4 text-lg text-white">
+              {projects[2].description}
+            </p>
+            <div className="relative z-10 mt-6">
+              <Link to={`/projects/${projects[2].id}`} className="text-white underline text-lg">
+                Ver detalles
+              </Link>
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+
+        {/* Cuarta tarjeta */}
+        <motion.div
+          className="relative rounded-lg overflow-hidden shadow-lg bg-[#1A1A1A] h-[28rem] md:h-96"
+          key={projects[3].id}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${projects[3].image})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+          <div className="relative z-10 p-8">
+            <p className="text-sm uppercase text-white opacity-70">
+              {projects[3].status}
+            </p>
+            <h2 className="text-3xl font-bold mt-4 text-white">
+              {projects[3].title}
+            </h2>
+            <p className="mt-4 text-lg text-white">
+              {projects[3].description}
+            </p>
+            <div className="relative z-10 mt-6">
+              <Link to={`/projects/${projects[3].id}`} className="text-white underline text-lg">
+                Ver detalles
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };
