@@ -33,66 +33,64 @@ const MoreInfo: React.FC = () => {
         viewport={{ once: true }}
         variants={fadeIn}
       >
-        Francisco es un líder en transformación digital, reconocido por su capacidad para impulsar la innovación y la eficiencia en diversas industrias. 
+        Abogado, emprendedor y experto en innovación inmobiliaria
       </motion.p>
 
-      {/* Sección de biografía */}
-      <motion.div
-        className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <h2 className="text-3xl font-semibold mb-4">Biografía</h2>
-        {/* Versión corta para móviles */}
-        <p className="text-neutral-400 text-lg leading-relaxed mb-4 block md:hidden">
-          Francisco, con más de 25 años de experiencia, ha sido mentor de startups y un referente en su campo.
-        </p>
-        {/* Versión larga para pantallas grandes */}
-        <p className="text-neutral-400 text-lg leading-relaxed mb-4 hidden md:block">
-          Con más de 25 años de experiencia en el ámbito digital, Francisco ha ocupado roles estratégicos en empresas de Fortune 100 y ha sido mentor de startups. Su pasión por la tecnología y la innovación lo han llevado a ser un referente en su campo, enfocándose en crear soluciones sostenibles y escalables que impulsan el crecimiento organizacional.
-        </p>
-        <p className="text-neutral-400 text-lg leading-relaxed mb-4 hidden md:block">
-          Francisco es un defensor del uso de la tecnología para el bien social y la sostenibilidad. Ha trabajado en proyectos que no solo benefician a las empresas, sino que también promueven el desarrollo sostenible y la responsabilidad social corporativa.
-        </p>
-        <p className="text-neutral-400 text-lg leading-relaxed hidden md:block">
-          A través de su carrera, ha demostrado una habilidad única para transformar desafíos complejos en oportunidades, alineando estrategias de negocio con tecnologías emergentes para garantizar el éxito a largo plazo.
-        </p>
-      </motion.div>
+     {/* Sección de biografía */}
+<motion.div
+  className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeIn}
+>
+  <h2 className="text-3xl font-semibold mb-4">Biografía</h2>
+  {/* Versión corta para móviles */}
+  <p className="text-neutral-400 text-lg leading-relaxed mb-4 block md:hidden">
+    Francisco Javier Romero Porres es CEO y fundador de Romero Porres Consultora y Capacitadora en Resolución de Conflictos, con más de 14 años de experiencia en la gestión de conflictos en ámbitos gubernamentales, sindicales y empresariales.
+  </p>
+  {/* Versión larga para pantallas grandes */}
+  <p className="text-neutral-400 text-lg leading-relaxed mb-4 hidden md:block">
+    Con más de 14 años de experiencia en la gestión de conflictos en ámbitos gubernamentales, sindicales y empresariales, me especializo en procesos de negociación colaborativa. Utilizo enfoques de Programación Neurolingüística (PNL), Coaching y Logoterapia para facilitar el aprendizaje y la resolución de problemas. Poseo un doctorado en Filosofía y he tenido el privilegio de ser ponente en congresos y docente en instituciones de renombre, como la U.C.A. y la UBA, donde imparto clases sobre persuasión y gestión de grupos. Este enfoque interdisciplinario ha permitido desarrollar propuestas efectivas para la resolución de conflictos.
+  </p>
+</motion.div>
 
-      {/* Sección de educación */}
-      <motion.div
-        className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <h2 className="text-3xl font-semibold mb-4">Educación</h2>
-        <ul className="text-neutral-400 text-lg list-disc pl-6 space-y-2">
-          <li><strong>Master en Administración de Empresas (MBA)</strong> - Universidad de Harvard</li>
-          <li><strong>Licenciatura en Ingeniería de Sistemas</strong> - Universidad de Buenos Aires</li>
-          <li><strong>Certificación en Transformación Digital</strong> - MIT Sloan School of Management</li>
-          <li><strong>Curso de Sostenibilidad y Responsabilidad Social</strong> - Universidad de Stanford</li>
-        </ul>
-      </motion.div>
+
+   {/* Sección de educación */}
+<motion.div
+  className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeIn}
+>
+  <h2 className="text-3xl font-semibold mb-4">Educación</h2>
+  <ul className="text-neutral-400 text-lg list-disc pl-6 space-y-2">
+    <li><strong>Doctorado en Filosofía</strong> - Universidad Nacional de San Juan (2020 - 2022)</li>
+    <li><strong>Posgrado en Logoterapia y Análisis Existencial</strong> - Pontificia Universidad Católica Argentina (2018 - 2019)</li>
+    <li><strong>Diplomatura en Complejidad y Epistemología</strong> - Multiversidad Edgar Morin (2020)</li>
+    <li><strong>Formación Integral en Mediación</strong> - Escuela de Posgrado del Colegio Público de Abogados de la Capital Federal (2018)</li>
+    <li><strong>Master Trainer en Programación Neurolingüística</strong> - IAFI (2017 - 2018)</li>
+  </ul>
+</motion.div>
+
 
       {/* Sección de experiencia */}
-      <motion.div
-        className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <h2 className="text-3xl font-semibold mb-4">Experiencia</h2>
-        <ul className="text-neutral-400 text-lg list-disc pl-6 space-y-2">
-          <li><strong>Chief Digital Officer</strong> - Empresa XYZ (2018 - Presente): Lidera la estrategia digital y la innovación tecnológica.</li>
-          <li><strong>Director de Innovación</strong> - Empresa ABC (2015 - 2018): Implementó soluciones digitales que aumentaron la eficiencia operativa y mejoraron la experiencia del cliente.</li>
-          <li><strong>Consultor en Transformación Digital</strong> - Empresa 123 (2010 - 2015): Asesoró a empresas en su camino hacia la digitalización, ayudándolas a adoptar tecnologías emergentes y a optimizar procesos.</li>
-        </ul>
-      </motion.div>
+<motion.div
+  className="bg-neutral-900 p-10 rounded-lg shadow-lg max-w-4xl w-full mb-8"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeIn}
+>
+  <h2 className="text-3xl font-semibold mb-4">Experiencia</h2>
+  <ul className="text-neutral-400 text-lg list-disc pl-6 space-y-2">
+    <li><strong>CEO y Fundador</strong> - Conexión Constructiva (2020 - Presente): Lidero iniciativas de verificación de obras y gestión de conflictos en el sector de la construcción, promoviendo prácticas eficientes y responsables.</li>
+    <li><strong>Facilitador de Programa</strong> - Romero Porres Consultora (2010 - Presente): Capacito a profesionales en procesos de negociación y resolución de conflictos en contextos gubernamentales, sindicales y empresariales.</li>
+    <li><strong>Profesor</strong> - Escuela de Posgrado del Colegio Público de Abogados de la Capital Federal (2016 - Presente): Enseño técnicas de persuasión y gestión de grupos en consorcios de propietarios y conjuntos inmobiliarios.</li>
+  </ul>
+</motion.div>
+
 
       {/* Botones */}
       <div className="w-full flex flex-col items-center mt-12 space-y-4">

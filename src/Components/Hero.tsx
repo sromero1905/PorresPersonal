@@ -33,7 +33,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }} // Con un pequeño retraso
         >
-          Hello, I'm Francisco Romero.
+          Hola, Soy Francisco Romero.
         </motion.h1>
         <motion.p
           className="text-gray-400 text-lg md:text-xl mt-4" // Ajuste de tamaño para el subtítulo
@@ -41,7 +41,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Mayor retraso para el subtítulo
         >
-          Former Head of Digital at Starbucks and MGM Resorts.
+          Abogado, CEO & Founder Romero Porres consultora 
         </motion.p>
       </motion.div>
     </section>

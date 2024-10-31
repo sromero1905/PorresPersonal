@@ -37,13 +37,12 @@ const Grid = () => {
           variants={fadeInUp}
         >
           <h2 className="text-white text-4xl font-bold mb-8">
-            From entrepreneurship to Fortune 100
+          Bienvenido a mi mundo profesional
           </h2>
           <p className="text-neutral-400 text-xl leading-relaxed mx-2"> {/* Ajuste de margen */}
-            Leveraging 25 years of experience, I've founded companies and worked at Fortune 100 companies. 
-            As a hands-on technology leader, I am proud that each and every day, millions of people use products 
-            I've helped to build. Today, I primarily focus on Digital Transformation projects as the world 
-            increasingly looks to technology to achieve their business ambitions.
+          Soy Francisco Romero Porres, abogado y emprendedor, comprometido con la transformación del sector inmobiliario a través de soluciones innovadoras y humanas. Detrás de cada transacción hay personas, sueños y aspiraciones, y mi misión es facilitar procesos que aporten claridad y confianza <br /> <br />
+
+A lo largo de mi carrera, fundé VEO S.A y Conexión Constructiva para ofrecer una nueva perspectiva en el mercado inmobiliario, promoviendo transparencia, seguridad y relaciones más sólidas entre los actores del sector.
           </p>
         </motion.div>
 
@@ -56,49 +55,30 @@ const Grid = () => {
           variants={fadeInUp}
         >
           <h2 className="text-white text-4xl font-bold mb-8">
-            Francisco Romero biography
+            
+          Impulsando la Transparencia y la Innovación en el Sector Inmobiliario
           </h2>
 
           {/* Versión resumida solo para móviles */}
           <p className="text-neutral-400 text-xl leading-relaxed block md:hidden mx-2">
-            Mr. Smith oversees all aspects of digital transformation, including team building, customer experience, 
-            engineering, development, and product management.
+          Dirijo la transformación inmobiliaria y el asesoramiento jurídico desde una perspectiva que combina innovación, transparencia y habilidades interpersonales. Como abogado y Chief Executive Officer de VEOSA, encabezo un equipo dedicado a garantizar la calidad y seguridad en cada desarrollo inmobiliario, ofreciendo auditorías y certificaciones que inspiran confianza en cada transacción.
           </p>
 
           {/* Versión completa solo para pantallas grandes */}
           <p className="text-neutral-400 text-xl leading-relaxed hidden md:block mx-2">
-            Mr. Smith oversees all aspects of digital transformation, including team building, customer experience, 
-            engineering, development, design, marketing technologies, and product management. His extensive experience 
-            as Chief Digital Officer/Chief Experience Officer has given him a unique perspective, allowing him to lead 
-            both front and back-of-house IT teams and manage data & security organizations efficiently.
+          Además, fundé Conexión Constructiva con el objetivo de fortalecer las habilidades sociales en el sector inmobiliario. A través de programas de coaching y capacitación, ayudamos a transformar la comunicación y colaboración entre profesionales, creando un mercado más humano y efectivo.
+
+
           </p>
 
           {/* El resto del contenido para pantallas grandes */}
           <p className="text-neutral-400 text-xl leading-relaxed mt-4 hidden md:block mx-2">
-            Kelly currently serves as the Chief Digital Officer at Athletic Greens, a company focused on providing 
-            world-class health and wellness products.
+          También soy socio en Romero Porres & Asociados, un estudio jurídico especializado en la asesoría legal de adquisiciones y desarrollos inmobiliarios. Nuestro enfoque estratégico asegura que cada cliente cuente con un respaldo legal integral durante todo el proceso de compra y desarrollo.
           </p>
           <p className="text-neutral-400 text-xl leading-relaxed mt-4 hidden md:block mx-2">
-            Prior to this role, Kelly was the Chief Strategy Officer of Hagerty, where he led 200 professionals in 
-            IT, Digital, Data, Martech, and Security roles. During su tenure, he helped Hagerty grow its valuation 
-            from nearly $1 billion to $3 billion, driving innovation across multiple platforms. This included the launch 
-            of disruptive membership and marketplace services, as well as unique event platforms not seen before in the 
-            automotive insurance industry.
+          Además, disfruto colaborar como asesor en nuevas empresas del sector inmobiliario y tecnológico, ayudándolas a mejorar sus operaciones y estructuras organizativas. Fuera del ámbito laboral, me encanta dedicar tiempo a la lectura y a los deportes al aire libre, buscando siempre nuevas ideas que impulsen mi visión de un mercado inmobiliario más eficiente y humano.
           </p>
-          <p className="text-neutral-400 text-xl leading-relaxed mt-4 hidden md:block mx-2">
-            In addition to his corporate achievements, Kelly has played a vital role in advising tech startups on scaling 
-            operations and building out their digital infrastructures. His hands-on approach has allowed many businesses 
-            to streamline operations and stay ahead in today’s competitive market. He is also a frequent speaker at 
-            industry conferences, sharing insights on digital transformation, cybersecurity, and innovative product 
-            development.
-          </p>
-          <p className="text-neutral-400 text-xl leading-relaxed mt-4 hidden md:block mx-2">
-            Kelly holds multiple certifications in cloud computing, cybersecurity, and agile methodologies. His passion 
-            for continuous learning keeps him at the forefront of technology trends and emerging innovations. 
-            Outside of work, Kelly is an avid car enthusiast, a hobby that aligns perfectly with his professional 
-            experience in the automotive industry.
-          </p>
-
+          
           {/* Botón minimalista para más información */}
           <Link to="/more-info">
             <motion.button
