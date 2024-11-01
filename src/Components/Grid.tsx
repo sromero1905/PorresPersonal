@@ -22,7 +22,7 @@ const Grid = () => {
           variants={fadeInUp}
         >
           <img 
-            src="/aboutme.jpg" 
+            src="/conexion2.jpg" 
             alt="Speaker" 
             className="w-full h-auto object-cover rounded-t-2xl" 
           />
@@ -87,7 +87,7 @@ A lo largo de mi carrera, fundé VEO S.A y Conexión Constructiva para ofrecer u
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
             >
-              More Information
+              Mas Información
             </motion.button>
           </Link>
         </motion.div>
